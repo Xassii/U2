@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- TODO -->
+<!-- Check all TODOs -->
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
@@ -14,14 +16,14 @@
         <h1>Boxmodellen</h1>
         <nav>
             <ul id="siteNavigation">
-                <li><a href="index.html" id="currentPage">Boxmodellen</a></li>
+                <li id="currentPage"><a href="index.html">Boxmodellen</a></li>
                 <li><a href="navigation.html">Navigering</a></li>
                 <li><a href="specifications.html">Målgruppsanalys och kravspecifikation</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="left">
             <h2>Boxmodellen</h2>
             <p>På en webbsida delas innehållet in i olika lådor som baseras på elementen i HTML-koden. Varje låda är indelad i flera delar där marginalen är längst ut, sedan kommer kanten, utfyllnad och längst in är innehållet. Lådans delar kan ändra storlek så att en kan anpassa utseendet på sidan.</p>
             <h3>Egenskaper</h3>
@@ -37,8 +39,10 @@
                 <dt>margin</dt>
                 <dd>Hur långt det ska vara mellan lådans kant och andra lådors kant eller marginaler</dd>
             </dl>
+        </section>
+        <section class="right">
             <h3>box-sizing</h3>
-            <img src="images/boxModel.png" alt="TODO">
+            <img src="images/boxModel.png" alt="TODO" class="imgLeft">
             <p>Med css egenskapen box-sizing kan en bestämma hur width och height egenskaperna kommer att påverka ett elements låda.<br>
             Om box-sizing är satt till content-box kommer width och height ändra hur mycket utrymme innehållet får ta. Om en då ändrar storleken på utfyllnaden eller kanten kommer hela lådan ta upp mer eller mindre plats.<br>
             Om box-sizing i stället sätts till border-box kommer width och height i stället ändra kantlådans storlek. I det fallet kommer innehållet att få mindre eller mer platts när en ändrar storleken på utfyllnaden eller kanten medans hela lådan kommer att vara samma storlek om en inte ändrar marginalen.</p>

@@ -1,5 +1,169 @@
 @charset "UTF-8";
 
 body {
-    background-color: aqua;
+    padding: 0%;
+    margin: 0%;
+    background-color: rgb(208, 255, 255);
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto minmax(25%, 80%) auto;
+    grid-template-areas:
+    "header  header  header"
+    ".       main .";
+}
+
+main {
+    background-color: ivory;
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+    "left right";
+}
+
+header {
+    background-color: deepskyblue;
+    border-bottom-style: double;
+    text-align: center;
+    grid-area: header;
+}
+
+section {
+    padding-inline: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Brush Script MT", cursive;
+}
+
+img {
+    width: 50%;
+    padding: 0.5rem;
+    transition: width 2s;
+}
+
+.imgLeft {
+    float: left;
+}
+
+.imgRight {
+    float: right;
+}
+
+.imgFill {
+    width: 100%;
+}
+
+img:hover {
+    width: 100%;
+}
+
+#siteNavigation {
+    height: 2.3rem;
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#siteNavigation li {
+    color: black;
+    font-family: monospace;
+    margin: 0%;
+    padding: 0.3rem;
+    background-color:cyan;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#siteNavigation li:hover {
+    transform: scaleY(1.2);
+    transform-origin: 0 bottom 0;
+}
+
+#siteNavigation a {
+    text-decoration: none;
+}
+
+#siteNavigation #currentPage {
+    align-self: stretch;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+}
+
+@media screen and (max-width:910px) {
+    main {
+        display: block;
+    }
+
+    img {
+        width: 33%;
+    }
+
+    img:hover {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    #siteNavigation li {
+        height: 1.6rem;
+        position: relative;
+    }
+
+    #siteNavigation a {
+        position: absolute;
+        top: 40%;
+        left: 13%;
+    }
+
+    #siteNavigation {
+        height: auto;
+        display: block;
+    }
+
+    #siteNavigation #currentPage {
+        background-color: rgb(0, 233, 233);
+    }
+
+    #siteNavigation li:hover, #siteNavigation #currentPage:hover {
+        background-color: rgb(153, 255, 255);
+        transform: none;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    img:hover {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:490px) {
+    body {
+        display: block;
+    }
+
+    header {
+        border: none;
+    }
+
+    #siteNavigation a {
+        position: absolute;
+        top: 40%;
+        left: 3%;
+    }
 }
