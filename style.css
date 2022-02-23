@@ -14,6 +14,7 @@ body {
 }
 
 main {
+    padding-block: 0.1%;
     background-color: ivory;
     grid-area: main;
     display: grid;
@@ -35,6 +36,8 @@ section {
 }
 
 h1 {
+    margin: 0%;
+    padding: 1rem;
     font-size: 3rem;
     font-family: "Brush Script MT", cursive;
 }
